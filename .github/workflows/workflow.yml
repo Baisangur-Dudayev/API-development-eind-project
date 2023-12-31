@@ -10,6 +10,7 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v1
 
+
       - name: Run tests
         run: |
           pytest test_randomizer.py
