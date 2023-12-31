@@ -5,3 +5,5 @@ sqlalchemy==1.4.42
 passlib[bcrypt,argon2]==1.7.4
 python-multipart
 python-jose[cryptography]==3.3.0
+pytest
+requests
