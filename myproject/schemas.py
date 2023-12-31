@@ -38,10 +38,10 @@ class AuthorBase(BaseModel):
         regex='^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$',
         description='Valid email address'
     )
-    first_name: str | None = None
-    last_name: str  | None = None
-    place_of_birth: str | None = None
-    biography: str | None = None
+    first_name: str | None = Field(None, max_length=50)
+    last_name: str | None = Field(None, max_length=50)
+    place_of_birth: str | None = Field(None, max_length=50)
+    biography: str | None = Field(None, max_length=50)
 
 class AuthorCreate(AuthorBase):
     password: str
