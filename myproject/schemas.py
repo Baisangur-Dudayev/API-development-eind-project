@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 #Book classen
 class BookBase(BaseModel):
@@ -33,7 +33,11 @@ class PenName(PenNameBase):
 
 #Author classen
 class AuthorBase(BaseModel):
-    email: str
+    email: str = Field(
+        ...,
+        regex='^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$',
+        description='Valid email address'
+    )
     first_name: str | None = None
     last_name: str  | None = None
     place_of_birth: str | None = None
