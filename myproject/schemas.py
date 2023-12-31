@@ -2,10 +2,10 @@ from pydantic import BaseModel, Field
 
 #Book classen
 class BookBase(BaseModel):
-    title: str
-    description: str | None = None
-    publication_date: str
-    genre: str
+    title: str = Field(..., max_length=50)
+    description: str | None = Field(None, max_length=500)
+    publication_date: str = Field(..., regex=r'\d{2}/\d{2}/\d{4}', description='Publication date in day/month/year format (DD/MM/YYYY)')
+    genre: str = Field(..., max_length=50)
 
 class BookCreate(BookBase):
     pass
@@ -19,7 +19,7 @@ class Book(BookBase):
 
 #PenName classen
 class PenNameBase(BaseModel):
-    pen_name: str
+    pen_name: str = Field(..., max_length=50)
 
 class PenNameCreate(PenNameBase):
     pass
@@ -44,7 +44,7 @@ class AuthorBase(BaseModel):
     biography: str | None = Field(None, max_length=50)
 
 class AuthorCreate(AuthorBase):
-    password: str
+    password: str = Field(..., min_length=8)
 
 class Author(AuthorBase):
     id: int
