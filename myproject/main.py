@@ -85,13 +85,13 @@ def create_author(author: schemas.AuthorCreate, db: Session = Depends(get_db)):
 
 
 @app.get("/authors/", response_model=list[schemas.Author])
-def read_authors(skip: int = 0, limit: int = 100, db: Session = Depends(get_db),token: str = Depends(oauth2_scheme)):
+def read_authors(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
     authors = crud.get_authors(db, skip=skip, limit=limit)
     return authors
 
 
 @app.get("/authors/{author_id}", response_model=schemas.Author)
-def read_author(author_id: int, db: Session = Depends(get_db), token: str = Depends(oauth2_scheme)):
+def read_author(author_id: int, db: Session = Depends(get_db)):
     db_author = crud.get_author(db, author_id=author_id)
     if db_author is None:
         raise HTTPException(status_code=404, detail="Author not found")
@@ -99,7 +99,7 @@ def read_author(author_id: int, db: Session = Depends(get_db), token: str = Depe
 
 #BOOKS
 @app.post("/authors/{author_id}/books/", response_model=schemas.Book)
-def create_book_for_author(author_id: int, book: schemas.BookCreate, db: Session = Depends(get_db), token: str = Depends(oauth2_scheme)):
+def create_book_for_author(author_id: int, book: schemas.BookCreate, db: Session = Depends(get_db)):
     return crud.create_author_book(db=db, book=book, author_id=author_id)
 
 @app.get("/books/", response_model=list[schemas.Book])
@@ -116,7 +116,7 @@ def delete_book_for_author(book_id: int, db: Session = Depends(get_db), token: s
 
 #PENNAMES
 @app.post("/authors/{author_id}/pen_names/",response_model=schemas.PenName)
-def create_pen_name_for_author(author_id: int, pen_name: schemas.PenNameCreate, db:Session = Depends(get_db), token: str = Depends(oauth2_scheme)):
+def create_pen_name_for_author(author_id: int, pen_name: schemas.PenNameCreate, db:Session = Depends(get_db)):
     return crud.create_author_pen_name(db=db, pen_name=pen_name, author_id=author_id)
 
 @app.delete("/pen_names/{pen_name_id}", response_model=schemas.PenName)
