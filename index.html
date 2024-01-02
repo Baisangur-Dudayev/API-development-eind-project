@@ -189,7 +189,7 @@
         <p>ID: <strong x-text="singleAuthor.id"></strong></p>
 
         <ul x-if="singleAuthor.books && singleAuthor.books.length">
-            <li><strong>List of books:</strong></li>
+            <li><b>List of books:</b></li>
             <template x-for="(book, bookIndex) in singleAuthor.books" :key="bookIndex">
                 <li>Title: <strong x-text="book.title"></strong></li>
 
