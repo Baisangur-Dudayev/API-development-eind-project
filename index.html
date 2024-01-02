@@ -12,6 +12,7 @@
         authors: null,
         books: null,
         accessToken: localStorage.getItem('access_token'),
+        userEmail: '',
 
         async login() {
     const form_data = new FormData(document.getElementById('loginForm'));
