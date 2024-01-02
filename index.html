@@ -65,14 +65,13 @@
         </div>
         <div x-show="accessToken">
             <p>logged in as: </p>
-                   <button x-on:click="logout">Logout</button>
-
+            <button x-on:click="logout">Logout</button>
         </div>
 
        <!--TOON GET ENDPOINT DATA-->
        <!--toon alle authors-->
        <button x-on:click="getAuthors">Send get request</button>
-               <div style="overflow-y: scroll; max-height: 300px;">
+               <div style="overflow-y: scroll; max-height: 250px;">
     <template x-for="(author, index) in responsedata" :key="index">
         <div>
             <p>Email: <strong x-text="author.email">Placeholder</strong></p>
@@ -97,11 +96,13 @@
 
        <!--toon alle books-->
    <button x-on:click="getBooks">get books</button>
+                <div style="overflow-y: scroll; max-height: 150px;">
                 <template x-for="(book, index) in books" :key="index">
                     <div>
                         <p>title: <strong x-text="book.title">Placeholder</strong></p>
                     </div>
                 </template>
+                </div>
    </div>
 </body>
 
