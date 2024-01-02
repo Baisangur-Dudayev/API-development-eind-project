@@ -7,7 +7,7 @@ The frontend of this project is hosted on GitHub Pages. You can access it [here]
 
 ## Okteto Development Environment
 
-I utilized Okteto for development. The API documentation is available at [Okteto - API Documentation]([https://api-development-eind-frontend.netlify.app/](https://useritem-api-service-eindproject-baisangur-dudayev.cloud.okteto.net/docs#/)).
+I utilized Okteto for development. The API documentation is available at [Okteto - API Documentation](https://useritem-api-service-eindproject-baisangur-dudayev.cloud.okteto.net/docs#/).
 
 #DEPLOYMENT
 ![image](https://github.com/Baisangur-Dudayev/API-development-eind-project/assets/113896223/92d38986-2e21-4c05-bab3-32817a5e615d)
