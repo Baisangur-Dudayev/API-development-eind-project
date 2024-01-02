@@ -66,8 +66,9 @@
         <div x-show="accessToken">
             <p>logged in as: </p>
         </div>
+       <div x-show="accessToken">
        <button x-on:click="logout">Logout</button>
-
+        </div>
        <!--TOON GET ENDPOINT DATA-->
        <!--toon alle authors-->
        <button x-on:click="getAuthors">Send get request</button>
