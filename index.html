@@ -163,6 +163,7 @@
         <p>ID: <strong x-text="singleAuthor.id"></strong></p>
 
         <ul x-if="singleAuthor.books && singleAuthor.books.length">
+            <li>List of books:</li>
             <template x-for="(book, bookIndex) in singleAuthor.books" :key="bookIndex">
                 <li>Title: <strong x-text="book.title"></strong></li>
                 <li>Description: <strong x-text="book.description"></strong></li>
@@ -171,7 +172,7 @@
             </template>
         </ul>
          <ul>
-                <template x-for="(penName, penNameIndex) in author.pen_names" :key="penNameIndex">
+                <template x-for="(penName, penNameIndex) in singleAuthor.pen_names" :key="penNameIndex">
                     <li>Pen Name: <strong x-text="penName.pen_name">Placeholder</strong></li>
                 </template>
             </ul>
