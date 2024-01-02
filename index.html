@@ -89,7 +89,7 @@
 
        <!--toon alle books-->
        <button x-on:click="getBooks">get books</button>
-                <template x-for="(book, index) in books" :key="index">
+                <template x-for="(book, indexa) in books" :key="indexa">
                     <div>
                         <p>title: <strong x-text="book.title">Placeholder</strong></p>
                     </div>
