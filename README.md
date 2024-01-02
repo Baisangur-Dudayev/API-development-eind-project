@@ -32,6 +32,7 @@ my endpoints:
 
 
 GET /authors/
+![image](https://github.com/Baisangur-Dudayev/API-development-eind-project/assets/113896223/1d2270ba-5a25-40aa-b78c-eff944a10c3a)
 
 
 
@@ -45,6 +46,7 @@ POST /authors/
 
 
 GET /authors/{author_id}
+![image](https://github.com/Baisangur-Dudayev/API-development-eind-project/assets/113896223/d0b153a4-ffba-4d48-afe7-da763125040f)
 
 
 
@@ -54,17 +56,25 @@ POST /authors/{author_id}/books/
 
 
 POST /authors/{author_id}/pen_names/
+![image](https://github.com/Baisangur-Dudayev/API-development-eind-project/assets/113896223/08ce0437-921f-44ac-b828-e55a264c0d6e)
 
 
 GET /books/
+![image](https://github.com/Baisangur-Dudayev/API-development-eind-project/assets/113896223/66e5cef9-69bf-46b4-9a77-964c41340a3c)
 
 
 
 DELETE
 /pen_names/{pen_name_id}
+![image](https://github.com/Baisangur-Dudayev/API-development-eind-project/assets/113896223/fb41294a-a618-48f8-97df-e1c99d0fac33)
 
 
 DELETE /books/{book_id}
+before logging in
+![image](https://github.com/Baisangur-Dudayev/API-development-eind-project/assets/113896223/c579efb4-1d32-4509-8c66-72f1c007c8f0)
+after logging in
+![image](https://github.com/Baisangur-Dudayev/API-development-eind-project/assets/113896223/2afb6ab5-b189-47c4-9b08-118aa00c827e)
+
 
 
 
