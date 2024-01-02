@@ -134,6 +134,41 @@
     <p>Biography that was inserted: <strong x-text="PostAuthorResponse.biography"></strong></p>
 </div>
 
+<!--GET Author by ID / Read one author-->
+<div x-data="{
+    singleAuthor: null,
+    authorIdInput: '',
+    async getAuthorById() {
+        const authorId = this.authorIdInput.trim();
+        if (authorId !== '') {
+            const response = await fetch(`https://useritem-api-service-eindproject-baisangur-dudayev.cloud.okteto.net/authors/${authorId}`);
+            this.singleAuthor = await response.json();
+            console.log(this.singleAuthor);
+        }
+    },
+}">
+    <label for="authorIdInput">Enter Author ID:</label>
+    <input type="text" x-model="authorIdInput" id="authorIdInput" placeholder="Author ID">
+
+    <button x-on:click="getAuthorById">Get Author by ID</button>
+
+    <div x-if="singleAuthor">
+        <p>Email: <strong x-text="singleAuthor.email"></strong></p>
+        <p>Name: <strong x-text="singleAuthor.first_name"></strong></p>
+        <p>Surname: <strong x-text="singleAuthor.last_name"></strong></p>
+        <p>Biography: <strong x-text="singleAuthor.biography"></strong></p>
+        <p>ID: <strong x-text="singleAuthor.id"></strong></p>
+
+        <ul x-if="singleAuthor.books && singleAuthor.books.length">
+            <template x-for="(book, bookIndex) in singleAuthor.books" :key="bookIndex">
+                <li>Title: <strong x-text="book.title"></strong></li>
+                <li>Description: <strong x-text="book.description"></strong></li>
+                <li>Publication Date: <strong x-text="book.publication_date"></strong></li>
+                <li>Genre: <strong x-text="book.genre"></strong></li>
+            </template>
+        </ul>
+    </div>
+</div>
 
 
 
@@ -158,7 +193,7 @@
             </ul>
         </div>
     </template>
-</div>
+        </div>
 
  <!--POST author book / Create Book For Author-->
         <div x-data="{
