@@ -27,7 +27,7 @@ I implemented Oath and hashing. U must authenticate before u can interact with t
 
 ## ENDPOINTS with api documentation
 my endpoints:
-![image](![image](https://github.com/Baisangur-Dudayev/API-development-eind-project/assets/113896223/e9075a19-db2a-49b0-a5f3-a3bfc1efd36c)
+(![image](https://github.com/Baisangur-Dudayev/API-development-eind-project/assets/113896223/e9075a19-db2a-49b0-a5f3-a3bfc1efd36c)
 )
 
 
