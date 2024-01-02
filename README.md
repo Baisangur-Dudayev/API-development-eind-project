@@ -50,6 +50,7 @@ GET /authors/{author_id}
 
 
 POST /authors/{author_id}/books/
+![image](https://github.com/Baisangur-Dudayev/API-development-eind-project/assets/113896223/272b11c1-29f2-4f11-963e-7030f5c0f8e7)
 
 
 POST /authors/{author_id}/pen_names/
