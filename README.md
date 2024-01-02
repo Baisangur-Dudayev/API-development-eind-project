@@ -91,10 +91,6 @@ POST /authors/
 GET /authors/{author_id}
 ![image](https://github.com/Baisangur-Dudayev/API-development-eind-project/assets/113896223/11d12d76-f520-48e1-9c55-e52a15c6af37)
 
-
-
-PUT /authors/{author_id}
-
 POST /authors/{author_id}/books/
 ![image](https://github.com/Baisangur-Dudayev/API-development-eind-project/assets/113896223/75e2c370-75d2-418f-9f59-067f3d498b90)
 
@@ -108,12 +104,16 @@ GET /books/
 ![image](https://github.com/Baisangur-Dudayev/API-development-eind-project/assets/113896223/a726b4dd-0ddc-4eae-8dc0-88f0315248b5)
 
 
-
-
+Ik kan verbinding maken met de PUT endpoint en de delete endpoints maar ik wist niet weke setting ik in postman moest veranderen voor de PUT
+endpoint om de data te sturen. Ik wist ook niet welke setting ik in postman moest veranderen om mijzelf the authenticeren voor DDELETE 
+endpoints in postman. Dit is niet omdat de endpoints niet werken maar omdat ik voormalig heb leren werken via /docs in mijn browser en 
+daarom kan ik niet vlot om met postman.
+PUT /authors/{author_id}
+![image](https://github.com/Baisangur-Dudayev/API-development-eind-project/assets/113896223/3d867c47-0eee-43b1-8105-692da03a06c4)
 DELETE /pen_names/{pen_name_id}
-
-
+![image](https://github.com/Baisangur-Dudayev/API-development-eind-project/assets/113896223/69904f19-f84a-40db-bdb0-6333d0fd1ee7)
 DELETE /books/{book_id}
+![image](https://github.com/Baisangur-Dudayev/API-development-eind-project/assets/113896223/9b6e9fb8-f9dc-4120-99a4-c69174baf691)
 
 
 ## FRONTEND
