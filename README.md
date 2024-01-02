@@ -3,7 +3,7 @@ This is my project for API development. The theme is about books. There are auth
 
 ## Frontend
 
-The frontend of this project is hosted on GitHub Pages. You can access it [here](https://api-development-eind-frontend.netlify.app/).
+The frontend of this project is hosted on Netlify. You can access it [here](https://api-development-eind-frontend.netlify.app/).
 
 ## Okteto Development Environment
 
