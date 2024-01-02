@@ -38,20 +38,19 @@
             if (response.ok) {
                 this.responsedata = await response.json();
             }
+        },
+            async getBooks() {
+            const response = await fetch('https://useritem-api-service-eindproject-baisangur-dudayev.cloud.okteto.net/books/');
+            if (response.ok) {
+                this.books = await response.json();
+            }
         }
 
 
 
 
     }">
-        <div x-data="{
-        async getBooks() {
-            const response = await fetch('https://useritem-api-service-eindproject-baisangur-dudayev.cloud.okteto.net/books/');
-            if (response.ok) {
-                this.books = await response.json();
-            }
-        }
-        }">
+        <div x-data="{}">
        <!--GET DATA-->
         <!--LOGIN-->
         <div x-show="!accessToken">
@@ -121,7 +120,6 @@
                        </div>
                 </template>
                 </div>
-        </div>
    </div>
 
 </body>
