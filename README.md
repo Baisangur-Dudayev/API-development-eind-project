@@ -14,9 +14,9 @@ I utilized Okteto for development. The API documentation is available at [Okteto
 
 
 
-##Authentication
+## Authentication
 
-I implemented Oath and hashing. U must authenticate before u can interact with the delete endpoints.
+I implemented Oath and hashing. U must authenticate before u can interact with the delete endpoints. In the endpoint section of the readme u can also see that i can only interact with a delete endpoint if im logged in. 
 ![image](https://github.com/Baisangur-Dudayev/API-development-eind-project/assets/113896223/896e5dcd-a09f-47cf-8c7f-e95c075bbb57)
 
 ![image](https://github.com/Baisangur-Dudayev/API-development-eind-project/assets/113896223/1aa05dd0-4212-4e49-9d4a-1244343bfa8e)
@@ -48,7 +48,8 @@ GET /authors/{author_id}
 ![image](https://github.com/Baisangur-Dudayev/API-development-eind-project/assets/113896223/d0b153a4-ffba-4d48-afe7-da763125040f)
 
 
-
+PUT /authors/{author_id}
+![image](https://github.com/Baisangur-Dudayev/API-development-eind-project/assets/113896223/0f3e33ba-3e2b-44be-a1e3-fc8d3537bd54)
 
 POST /authors/{author_id}/books/
 ![image](https://github.com/Baisangur-Dudayev/API-development-eind-project/assets/113896223/272b11c1-29f2-4f11-963e-7030f5c0f8e7)
@@ -74,8 +75,5 @@ before logging in
 after logging in
 ![image](https://github.com/Baisangur-Dudayev/API-development-eind-project/assets/113896223/2afb6ab5-b189-47c4-9b08-118aa00c827e)
 
-
-
-
-##FRONTEND
+## FRONTEND
 
