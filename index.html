@@ -82,7 +82,31 @@
             console.log(this.responsedataPostBook);
         },
     }">
+               <!--maak een book-->
+ <label for="authorId">Author ID:</label>
+        <input type="text" x-model="authorId" id="authorId" placeholder="Enter Author ID">
 
+        <label for="title">Title:</label>
+        <input type="text" x-model="postBookData.title" id="title" placeholder="Enter Book Title">
+
+        <label for="description">Description:</label>
+        <input type="text" x-model="postBookData.description" id="description" placeholder="Enter Book Description">
+
+        <label for="publication_date">Publication Date:</label>
+        <input type="text" x-model="postBookData.publication_date" id="publication_date" placeholder="Enter Publication Date">
+
+        <label for="genre">Genre:</label>
+        <input type="text" x-model="postBookData.genre" id="genre" placeholder="Enter Genre">
+
+        <button x-on:click="addBook">Add Book</button>
+
+        <p>Data inserted with id: <strong x-text="responsedataPostBook.id"></strong></p>
+        <p>Title that was inserted: <strong x-text="responsedataPostBook.title"></strong></p>
+            <p>description that was inserted: <strong x-text="responsedataPostBook.description"></strong></p>
+            <p>publication date that was inserted: <strong x-text="responsedataPostBook.publication_date"></strong></p>
+            <p>Genre: that was inserted: <strong x-text="responsedataPostBook.genre"></strong></p>
+
+ </div>
 
         <!--LOGIN info-->
         <div x-show="!accessToken">
@@ -125,29 +149,6 @@
     </template>
 </div>
 
-    <!--maak een book-->
- <label for="authorId">Author ID:</label>
-        <input type="text" x-model="authorId" id="authorId" placeholder="Enter Author ID">
-
-        <label for="title">Title:</label>
-        <input type="text" x-model="postBookData.title" id="title" placeholder="Enter Book Title">
-
-        <label for="description">Description:</label>
-        <input type="text" x-model="postBookData.description" id="description" placeholder="Enter Book Description">
-
-        <label for="publication_date">Publication Date:</label>
-        <input type="text" x-model="postBookData.publication_date" id="publication_date" placeholder="Enter Publication Date">
-
-        <label for="genre">Genre:</label>
-        <input type="text" x-model="postBookData.genre" id="genre" placeholder="Enter Genre">
-
-        <button x-on:click="addBook">Add Book</button>
-
-        <p>Data inserted with id: <strong x-text="responsedataPostBook.id"></strong></p>
-        <p>Title that was inserted: <strong x-text="responsedataPostBook.title"></strong></p>
-            <p>description that was inserted: <strong x-text="responsedataPostBook.description"></strong></p>
-            <p>publication date that was inserted: <strong x-text="responsedataPostBook.publication_date"></strong></p>
-            <p>Genre: that was inserted: <strong x-text="responsedataPostBook.genre"></strong></p>
 
 
        <!--toon alle books-->
@@ -165,7 +166,7 @@
                 </template>
                 </div>
 
-    </div>
+
    </div>
 
 </body>
