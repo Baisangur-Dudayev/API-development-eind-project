@@ -74,59 +74,7 @@
         </div>
 
         <!--POST author -->
-        <div x-data="{
-        responsedataPostAuthor: null,
-        postAuthorData: {
-            email: '',
-            first_name: '',
-            last_name: '',
-            place_of_birth: '',
-            biography: '',
-        },
-        async PostAuthor() {
 
-            this.responsedataPostAuthor = await (await fetch(`https://useritem-api-service-eindproject-baisangur-dudayev.cloud.okteto.net/authors/`, {
-                method: 'POST',
-                body: JSON.stringify({
-                    email: this.postAuthorData.email,
-                    first_name: this.postAuthorData.first_name,
-                    last_name: this.postAuthorData.last_name,
-                    place_of_birth: this.postAuthorData.place_of_birth,
-                    biography: this.postAuthorData.biography,
-
-            }),
-             headers: {
-                    'Content-type': 'application/json; charset=UTF-8',
-                },
-            })).json();
-
-        },
-    }">
-        <label for="email">email:</label>
-        <input type="text" x-model="postAuthorData.email" id="email" placeholder="Enter email">
-
-        <label for="first_name">first_name:</label>
-        <input type="text" x-model="postAuthorData.first_name" id="first_name" placeholder="Enter Book first name">
-
-        <label for="last_name">last_name:</label>
-        <input type="text" x-model="postAuthorData.last_name" id="last_name" placeholder="Enter last name">
-
-        <label for="place_of_birth">place_of_birth:</label>
-        <input type="text" x-model="postAuthorData.place_of_birth" id="place_of_birth" placeholder="Enter place of birth">
-
-            <label for="biography">biography:</label>
-        <input type="text" x-model="postAuthorData.biography" id="biography" placeholder="Enter biography">
-
-        <button x-on:click="PostAuthor">Add Author</button>
-
-        <p>Data inserted with id: <strong x-text="responsedataPostAuthor.id"></strong></p>
-        <p>email that was inserted: <strong x-text="responsedataPostAuthor.email"></strong></p>
-            <p>last_name that was inserted: <strong x-text="responsedataPostAuthor.last_name"></strong></p>
-            <p>place of birth  that was inserted: <strong x-text="responsedataPostAuthor.place_of_birth"></strong></p>
-            <p>biography: that was inserted: <strong x-text="responsedataPostAuthor.biography"></strong></p>
-
-
-        </div>
 
        <!--GET Authors / Read authors-->
        <button x-on:click="getAuthors">Send get request</button>
@@ -153,7 +101,7 @@
 
  <!--POST author book / Create Book For Author-->
         <div x-data="{
-        responsedataPostBook: null,
+        PostBookResponse: null,
         postBookData: {
             title: '',
             description: '',
@@ -163,7 +111,7 @@
         PostBookAuthorId: '',
         async addBook() {
 
-            this.responsedataPostBook = await (await fetch(`https://useritem-api-service-eindproject-baisangur-dudayev.cloud.okteto.net/authors/${this.PostBookAuthorId}/books/`, {
+            this.PostBookResponse = await (await fetch(`https://useritem-api-service-eindproject-baisangur-dudayev.cloud.okteto.net/authors/${this.PostBookAuthorId}/books/`, {
                 method: 'POST',
                 body: JSON.stringify({
                     title: this.postBookData.title,
@@ -176,7 +124,7 @@
                 },
             })).json();
 
-            console.log(this.responsedataPostBook);
+            console.log(this.PostBookResponse);
         },
     }">
  <label for="PostBookAuthorId">Author ID:</label>
@@ -196,11 +144,11 @@
 
         <button x-on:click="addBook">Add Book</button>
 
-        <p>Data inserted with id: <strong x-text="responsedataPostBook.id"></strong></p>
-        <p>Title that was inserted: <strong x-text="responsedataPostBook.title"></strong></p>
-            <p>description that was inserted: <strong x-text="responsedataPostBook.description"></strong></p>
-            <p>publication date that was inserted: <strong x-text="responsedataPostBook.publication_date"></strong></p>
-            <p>Genre: that was inserted: <strong x-text="responsedataPostBook.genre"></strong></p>
+        <p>Data inserted with id: <strong x-text="PostBookResponse.id"></strong></p>
+        <p>Title that was inserted: <strong x-text="PostBookResponse.title"></strong></p>
+            <p>description that was inserted: <strong x-text="PostBookResponse.description"></strong></p>
+            <p>publication date that was inserted: <strong x-text="PostBookResponse.publication_date"></strong></p>
+            <p>Genre: that was inserted: <strong x-text="PostBookResponse.genre"></strong></p>
 
  </div>
 
