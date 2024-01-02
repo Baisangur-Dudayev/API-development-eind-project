@@ -163,12 +163,10 @@
         <p>ID: <strong x-text="singleAuthor.id"></strong></p>
 
         <ul x-if="singleAuthor.books && singleAuthor.books.length">
-            <li>List of books:</li>
+            <li><strong>List of books:</strong></li>
             <template x-for="(book, bookIndex) in singleAuthor.books" :key="bookIndex">
                 <li>Title: <strong x-text="book.title"></strong></li>
-                <li>Description: <strong x-text="book.description"></strong></li>
-                <li>Publication Date: <strong x-text="book.publication_date"></strong></li>
-                <li>Genre: <strong x-text="book.genre"></strong></li>
+
             </template>
         </ul>
          <ul>
