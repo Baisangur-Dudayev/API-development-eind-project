@@ -11,7 +11,7 @@
    <div x-data="{
         authors: null,
         books: null,
-        user: null,
+
         accessToken: localStorage.getItem('access_token'),
 
         async login() {
@@ -31,7 +31,7 @@
         },
          async fetchUserData() {
 
-        const userResponse = await fetch('https://useritem-api-service-eindproject-baisangur-dudayev.cloud.okteto.net/users/me/', {
+        const userResponse = await fetch('https://useritem-api-service-eindproject-baisangur-dudayev.cloud.okteto.net/users/me', {
             headers: {
                 Authorization: `Bearer ${this.accessToken}`,
             },
