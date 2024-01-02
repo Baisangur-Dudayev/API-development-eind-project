@@ -27,6 +27,17 @@
             }
 
         },
+         async fetchUserData() {
+        const userResponse = await fetch('https://useritem-api-service-eindproject-baisangur-dudayev.cloud.okteto.net/users/me/', {
+            headers: {
+                Authorization: `Bearer ${this.accessToken}`,
+            },
+        });
+
+        if (userResponse.ok) {
+            this.user = await userResponse.json();
+        }
+    },
 
         logout() {
             this.accessToken = null;
@@ -69,7 +80,7 @@
             </form>
         </div>
         <div x-show="accessToken">
-            <p>logged in as: </p>
+                <p>Logged in as: <strong x-text="user.email">Placeholder</strong></p>
             <button x-on:click="logout" class="blue">Logout</button>
         </div>
 
