@@ -228,19 +228,21 @@
         },
     }">
  <label for="PostBookAuthorId">Author ID:</label>
-        <input type="text" x-model="PostBookAuthorId" id="PostBookAuthorId" placeholder="Enter Author ID">
+            <p><input type="text" x-model="PostBookAuthorId" id="PostBookAuthorId" placeholder="Enter Author ID"></p>
 
-        <label for="title">Title:</label>
-        <input type="text" x-model="postBookInput.title" id="title" placeholder="Enter Book Title">
+            <p><label for="title">Title:</label>
+                <input type="text" x-model="postBookInput.title" id="title" placeholder="Enter Book Title"></p>
 
-        <label for="description">Description:</label>
-        <input type="text" x-model="postBookInput.description" id="description" placeholder="Enter Book Description">
+            <p><label for="description">Description:</label>
+                <input type="text" x-model="postBookInput.description" id="description"
+                       placeholder="Enter Book Description"></p>
 
-        <label for="publication_date">Publication Date:</label>
-        <input type="text" x-model="postBookInput.publication_date" id="publication_date" placeholder="Enter Publication Date">
+            <p><label for="publication_date">Publication Date:</label>
+                <input type="text" x-model="postBookInput.publication_date" id="publication_date"
+                       placeholder="Enter Publication Date"></p>
 
-        <label for="genre">Genre:</label>
-        <input type="text" x-model="postBookInput.genre" id="genre" placeholder="Enter Genre">
+            <p><label for="genre">Genre:</label>
+                <input type="text" x-model="postBookInput.genre" id="genre" placeholder="Enter Genre"></p>
 
         <button x-on:click="addBook">Add Book</button>
 
