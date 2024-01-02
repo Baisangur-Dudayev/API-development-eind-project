@@ -75,6 +75,58 @@
 
         <!--POST author -->
 
+<div x-data="{
+    PostAuthorResponse: null,
+    postAuthorInput: {
+        email: '',
+        first_name: '',
+        last_name: '',
+        place_of_birth: '',
+        biography: '',
+    },
+    async addAuthor() {
+        this.PostAuthorResponse = await (await fetch('https://useritem-api-service-eindproject-baisangur-dudayev.cloud.okteto.net/authors/', {
+            method: 'POST',
+            body: JSON.stringify({
+                email: this.postAuthorInput.email,
+                first_name: this.postAuthorInput.first_name,
+                last_name: this.postAuthorInput.last_name,
+                place_of_birth: this.postAuthorInput.place_of_birth,
+                biography: this.postAuthorInput.biography,
+            }),
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+            },
+        })).json();
+
+        console.log(this.PostAuthorResponse);
+    },
+}">
+    <label for="email">Email:</label>
+    <input type="text" x-model="postAuthorInput.email" id="email" placeholder="Enter Email">
+
+    <label for="first_name">First Name:</label>
+    <input type="text" x-model="postAuthorInput.first_name" id="first_name" placeholder="Enter First Name">
+
+    <label for="last_name">Last Name:</label>
+    <input type="text" x-model="postAuthorInput.last_name" id="last_name" placeholder="Enter Last Name">
+
+    <label for="place_of_birth">Place of Birth:</label>
+    <input type="text" x-model="postAuthorInput.place_of_birth" id="place_of_birth" placeholder="Enter Place of Birth">
+
+    <label for="biography">Biography:</label>
+    <input type="text" x-model="postAuthorInput.biography" id="biography" placeholder="Enter Biography">
+
+    <button x-on:click="addAuthor">Add Author</button>
+
+    <p>Data inserted with id: <strong x-text="PostAuthorResponse.id"></strong></p>
+    <p>Email that was inserted: <strong x-text="PostAuthorResponse.email"></strong></p>
+    <p>First Name that was inserted: <strong x-text="PostAuthorResponse.first_name"></strong></p>
+    <p>Last Name that was inserted: <strong x-text="PostAuthorResponse.last_name"></strong></p>
+    <p>Place of Birth that was inserted: <strong x-text="PostAuthorResponse.place_of_birth"></strong></p>
+    <p>Biography that was inserted: <strong x-text="PostAuthorResponse.biography"></strong></p>
+</div>
+
 
        <!--GET Authors / Read authors-->
        <button x-on:click="getAuthors">Send get request</button>
