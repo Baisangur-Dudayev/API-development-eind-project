@@ -150,10 +150,10 @@
         }
     },
 }">
-    <label for="authorIdInput">Enter Author ID:</label>
-    <input type="text" x-model="authorIdInput" id="authorIdInput" placeholder="Author ID">
+    <p><label for="authorIdInput">Enter Author ID:</label>
+        <input type="text" x-model="authorIdInput" id="authorIdInput" placeholder="Author ID"></p>
 
-    <button x-on:click="getAuthorById">Get Author by ID</button>
+    <button x-on:click="getAuthorById" class="blue">Get Author by ID</button>
  <div style="overflow-y: scroll; max-height: 250px;">
     <div x-if="singleAuthor">
         <p>Email: <strong x-text="singleAuthor.email"></strong></p>
