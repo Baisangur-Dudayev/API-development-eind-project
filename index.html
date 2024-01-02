@@ -84,6 +84,7 @@
         last_name: '',
         place_of_birth: '',
         biography: '',
+        PostAuthorPassword: '',
     },
     async addAuthor() {
 
@@ -95,6 +96,7 @@
                 last_name: this.postAuthorInput.last_name,
                 place_of_birth: this.postAuthorInput.place_of_birth,
                 biography: this.postAuthorInput.biography,
+                password: this.postAuthorInput.PostAuthorPassword,
             }),
             headers: {
                 'Content-type': 'application/json; charset=UTF-8',
@@ -105,28 +107,33 @@
     },
 }">
     <label for="email">Email:</label>
-    <input type="text" x-model="postAuthorInput.email" id="email" placeholder="Enter Author's Email">
+    <input type="text" x-model="postAuthorInput.email" id="email" placeholder="Enter Email">
 
     <label for="first_name">First Name:</label>
-    <input type="text" x-model="postAuthorInput.first_name" id="first_name" placeholder="Enter Author's First Name">
+    <input type="text" x-model="postAuthorInput.first_name" id="first_name" placeholder="Enter First Name">
 
     <label for="last_name">Last Name:</label>
-    <input type="text" x-model="postAuthorInput.last_name" id="last_name" placeholder="Enter Author's Last Name">
+    <input type="text" x-model="postAuthorInput.last_name" id="last_name" placeholder="Enter Last Name">
 
     <label for="place_of_birth">Place of Birth:</label>
-    <input type="text" x-model="postAuthorInput.place_of_birth" id="place_of_birth" placeholder="Enter Author's Place of Birth">
+    <input type="text" x-model="postAuthorInput.place_of_birth" id="place_of_birth" placeholder="Enter Place of Birth">
 
     <label for="biography">Biography:</label>
-    <input type="text" x-model="postAuthorInput.biography" id="biography" placeholder="Enter Author's Biography">
+    <input type="text" x-model="postAuthorInput.biography" id="biography" placeholder="Enter Biography">
+
+    <label for="PostAuthorPassword">Password:</label>
+    <input type="PostAuthorPassword" x-model="postAuthorInput.PostAuthorPassword" id="PostAuthorPassword" placeholder="Enter PostAuthorPassword">
 
     <button x-on:click="addAuthor">Add Author</button>
 
+    <p>Data inserted with id: <strong x-text="PostAuthorResponse.id"></strong></p>
     <p>Email that was inserted: <strong x-text="PostAuthorResponse.email"></strong></p>
     <p>First Name that was inserted: <strong x-text="PostAuthorResponse.first_name"></strong></p>
     <p>Last Name that was inserted: <strong x-text="PostAuthorResponse.last_name"></strong></p>
     <p>Place of Birth that was inserted: <strong x-text="PostAuthorResponse.place_of_birth"></strong></p>
     <p>Biography that was inserted: <strong x-text="PostAuthorResponse.biography"></strong></p>
 </div>
+
 
 
 
