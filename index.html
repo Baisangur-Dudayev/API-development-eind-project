@@ -54,23 +54,23 @@
        <!--POST authors-->
           <div x-data="{
         responsedata: null,
-        authorId: null,
-        penNameData: {
-            title: 'string',
-            description: 'string',
-            publication_date: 'string',
-            genre: 'string',
-            // Add other properties as needed
+        postData: {
+            title: '',
+            description: '',
+            publication_date: '',
+            genre: '',
         },
+        authorId: '',
+        async addBook() {
+            const formData = new FormData();
+            formData.append('title', this.postData.title);
+            formData.append('description', this.postData.description);
+            formData.append('publication_date', this.postData.publication_date);
+            formData.append('genre', this.postData.genre);
 
-        async addPenName() {
-            this.responsedata = await (await fetch(`https://useritem-api-service-eindproject-baisangur-dudayev.cloud.okteto.net/authors/${this.authorId}/books/`,
-            {
+            this.responsedata = await (await fetch(`https://useritem-api-service-eindproject-baisangur-dudayev.cloud.okteto.net/authors/${this.authorId}/books/`, {
                 method: 'POST',
-                body: JSON.stringify(this.penNameData),
-                headers: {
-                    'Content-type': 'application/json; charset=UTF-8',
-                },
+                body: formData,
             })).json();
 
             console.log(this.responsedata);
@@ -119,20 +119,25 @@
 </div>
 
     <!--toon een author-->
-  <label for="authorId">Author ID:</label>
-        <input type="text" id="authorId" x-model="authorId" placeholder="Enter Author ID">
+ <label for="authorId">Author ID:</label>
+        <input type="text" x-model="authorId" id="authorId" placeholder="Enter Author ID">
 
-        <!-- Input fields for each property -->
-        <input type="text" x-model="penNameData.title" placeholder="Title">
-        <input type="text" x-model="penNameData.description" placeholder="Description">
-        <input type="text" x-model="penNameData.publication_date" placeholder="Publication Date">
-        <input type="text" x-model="penNameData.genre" placeholder="Genre">
+        <label for="title">Title:</label>
+        <input type="text" x-model="postData.title" id="title" placeholder="Enter Book Title">
 
-        <button x-on:click="addPenName">Add Pen Name</button>
+        <label for="description">Description:</label>
+        <input type="text" x-model="postData.description" id="description" placeholder="Enter Book Description">
 
-        <p>Pen Name added with ID: <strong x-text="responsedata.id"></strong></p>
-        <p>Pen Name: <strong x-text="responsedata.pen_name"></strong></p>
-        <!-- Add other response data properties as needed -->
+        <label for="publication_date">Publication Date:</label>
+        <input type="text" x-model="postData.publication_date" id="publication_date" placeholder="Enter Publication Date">
+
+        <label for="genre">Genre:</label>
+        <input type="text" x-model="postData.genre" id="genre" placeholder="Enter Genre">
+
+        <button x-on:click="addBook">Add Book</button>
+
+        <p>Data inserted with id: <strong x-text="responsedata.id"></strong></p>
+        <p>Title that was inserted: <strong x-text="responsedata.title"></strong></p>
 
        <!--toon alle books-->
    <button x-on:click="getBooks">get books</button>
