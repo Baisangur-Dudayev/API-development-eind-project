@@ -17,11 +17,10 @@ I utilized Okteto for development. The API documentation is available at [Okteto
 ##Authentication
 
 I implemented Oath and hashing. U must authenticate before u can interact with the delete endpoints.
+![image](https://github.com/Baisangur-Dudayev/API-development-eind-project/assets/113896223/896e5dcd-a09f-47cf-8c7f-e95c075bbb57)
 
-![image](https://github.com/Baisangur-Dudayev/API-development-basis-project/assets/113896223/8a5b6a27-75ad-4fe3-a387-d0d0096b3be3)
+![image](https://github.com/Baisangur-Dudayev/API-development-eind-project/assets/113896223/1aa05dd0-4212-4e49-9d4a-1244343bfa8e)
 
-
-![image](https://github.com/Baisangur-Dudayev/API-development-basis-project/assets/113896223/954fb833-ebb8-4920-b95e-3abb69159ed5)
 
 
 
