@@ -18,6 +18,14 @@ button {
     cursor: pointer;
 }
 
+button #blue {
+    background-color: #61AFFE;
+
+}
+button:hover #blue {
+    background-color: #458fd9;
+
+}
 button:hover {
     background-color: #45a049;
 }

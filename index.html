@@ -177,7 +177,7 @@
 
 
        <!--GET Authors / Read authors-->
-       <button x-on:click="getAuthors">Send get request</button>
+       <button x-on:click="getAuthors" class="blue">Get Authors</button>
                <div style="overflow-y: scroll; max-height: 250px;">
     <template x-for="(author, index) in authors" :key="index">
         <div>
