@@ -1,27 +1,23 @@
 # API Project
-
-Welcome to the API Project! This project serves as a foundation for API development. Below, you'll find essential information about the project.
+This is my project for API development. The theme is about books. There are authors, books, pen names. In total there are 10 endpoints: 4 get's, 4 Post's & 2 Delete's. I have done all the minimum requirements (number 1.) and I have done a few front-end requiremnts (numbers 3.1, 3.1.1, 3.1.2).
 
 ## Frontend
 
-The frontend of this project is hosted on GitHub Pages. You can access it [here](https://baisangur-dudayev.github.io/API-development-basis-project/myproject/).
+The frontend of this project is hosted on GitHub Pages. You can access it [here](https://api-development-eind-frontend.netlify.app/).
 
 ## Okteto Development Environment
 
-I utilized Okteto for development. The API documentation is available at [Okteto - API Documentation](https://useritem-api-service-baisangur-dudayev.cloud.okteto.net/docs#/).
+I utilized Okteto for development. The API documentation is available at [Okteto - API Documentation]([https://api-development-eind-frontend.netlify.app/](https://useritem-api-service-eindproject-baisangur-dudayev.cloud.okteto.net/docs#/)).
 
 #DEPLOYMENT
-![image](https://github.com/Baisangur-Dudayev/API-development-basis-project/assets/113896223/a5ce7fc0-b90e-45a4-936c-2cb121eae178)
+![image](https://github.com/Baisangur-Dudayev/API-development-eind-project/assets/113896223/92d38986-2e21-4c05-bab3-32817a5e615d)
+
 
 
 ##Authentication
 
-Describe how users can interact with your API. Provide examples of endpoints, request payloads, and expected responses. Include any authentication or authorization requirements.
+I implemented Oath and hashing. U must authenticate before u can interact with the delete endpoints.
 
-
-
-u must authenticate firstto use most endpoints
-There is already a user with email: "Light@hotmail.com" & password: "password"
 ![image](https://github.com/Baisangur-Dudayev/API-development-basis-project/assets/113896223/8a5b6a27-75ad-4fe3-a387-d0d0096b3be3)
 
 
@@ -29,9 +25,10 @@ There is already a user with email: "Light@hotmail.com" & password: "password"
 
 
 
-## ENDPOINTS
+## ENDPOINTS with api documentation
 my endpoints:
-![image](https://github.com/Baisangur-Dudayev/API-development-basis-project/assets/113896223/67b4fefb-f603-4f8e-9daf-be58dbf8ddcb)
+![image](![image](https://github.com/Baisangur-Dudayev/API-development-eind-project/assets/113896223/e9075a19-db2a-49b0-a5f3-a3bfc1efd36c)
+)
 
 
 GET /authors/
@@ -41,7 +38,8 @@ GET /authors/
 
 POST /authors/ 
 
-![image](https://github.com/Baisangur-Dudayev/API-development-basis-project/assets/113896223/c63c89d4-ed33-4432-a396-a0aabb3c8ba0)
+![image](![image](https://github.com/Baisangur-Dudayev/API-development-eind-project/assets/113896223/bd89d9fd-b626-4673-b151-e5308ef07b49)
+)
 
 
 GET /authors/{author_id}
