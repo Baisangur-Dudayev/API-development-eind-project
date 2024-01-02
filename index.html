@@ -7,7 +7,7 @@
 <body>
 
    <div x-data="{
-           responsedata: null,
+
         accessToken: localStorage.getItem('access_token'),
 
         async login() {
@@ -92,7 +92,7 @@
 
        <!--toon alle books-->
    <button x-on:click="getBooks">get books</button>
-                <template x-for="(book, indexa) in books" :key="indexa">
+                <template x-for="(book, index) in books" :key="index">
                     <div>
                         <p>title: <strong x-text="book.title">Placeholder</strong></p>
                     </div>
