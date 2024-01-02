@@ -28,6 +28,14 @@ def create_author(db: Session, author: schemas.AuthorCreate):
     db.refresh(db_author)
     return db_author
 
+def update_author_email(db: Session, author_id: int, new_email: str):
+    db_author = db.query(models.Author).filter(models.Author.id == author_id).first()
+    if db_author:
+        db_author.email = new_email
+        db.commit()
+        db.refresh(db_author)
+    return db_author
+
 #BOOKS
 def get_books(db: Session, skip: int = 0, limit: int = 100):
     return db.query(models.Book).offset(skip).limit(limit).all()
