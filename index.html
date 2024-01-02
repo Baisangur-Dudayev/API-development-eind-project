@@ -52,7 +52,7 @@
 
     }">
        <!--POST authors-->
-          <div x-data="{
+       <div x-data="{
         responsedata: null,
         postData: {
             title: '',
@@ -62,18 +62,27 @@
         },
         authorId: '',
         async addBook() {
-            const formData = new FormData();
-            formData.append('title', this.postData.title);
-            formData.append('description', this.postData.description);
-            formData.append('publication_date', this.postData.publication_date);
-            formData.append('genre', this.postData.genre);
+            try {
+                const formData = new FormData();
+                formData.append('title', this.postData.title);
+                formData.append('description', this.postData.description);
+                formData.append('publication_date', this.postData.publication_date);
+                formData.append('genre', this.postData.genre);
 
-            this.responsedata = await (await fetch(`https://useritem-api-service-eindproject-baisangur-dudayev.cloud.okteto.net/authors/${this.authorId}/books/`, {
-                method: 'POST',
-                body: formData,
-            })).json();
+                const response = await fetch(`https://useritem-api-service-eindproject-baisangur-dudayev.cloud.okteto.net/authors/${this.authorId}/books/`, {
+                    method: 'POST',
+                    body: formData,
+                });
 
-            console.log(this.responsedata);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+
+                this.responsedata = await response.json();
+                console.log('Book added successfully:', this.responsedata);
+            } catch (error) {
+                console.error('Error adding book:', error.message);
+            }
         },
     }">
 
@@ -118,7 +127,7 @@
     </template>
 </div>
 
-    <!--toon een author-->
+    <!--maak een book-->
  <label for="authorId">Author ID:</label>
         <input type="text" x-model="authorId" id="authorId" placeholder="Enter Author ID">
 
