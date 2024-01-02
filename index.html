@@ -73,6 +73,32 @@
             <button x-on:click="logout" class="blue">Logout</button>
         </div>
 
+        <!--GET Authors / Read authors-->
+       <button x-on:click="getAuthors" class="blue">Get Authors</button>
+               <div style="overflow-y: scroll; max-height: 250px;">
+    <template x-for="(author, index) in authors" :key="index">
+        <div>
+            <p>Email: <strong x-text="author.email">Placeholder</strong></p>
+            <p>Name: <strong x-text="author.first_name">Placeholder</strong></p>
+            <p>Surname: <strong x-text="author.last_name">Placeholder</strong></p>
+            <p>Biography: <strong x-text="author.biography">Placeholder</strong></p>
+            <p>ID: <strong x-text="author.id">Placeholder</strong></p>
+
+            <ul>
+                <li><strong>List of books:</strong></li>
+                <template x-for="(book, bookIndex) in author.books" :key="bookIndex">
+                    <li>Title: <strong x-text="book.title">Placeholder</strong></li>
+                </template>
+            </ul>
+             <ul>
+                <template x-for="(penName, penNameIndex) in singleAuthor.pen_names" :key="penNameIndex">
+                    <li>Pen Name: <strong x-text="penName.pen_name">Placeholder</strong></li>
+                </template>
+            </ul>
+        </div>
+    </template>
+        </div>
+
         <!--POST author -->
 
 <!--POST author / Create Author-->
@@ -178,31 +204,6 @@
     </div>
      </div>
 </div>
-
-
-
-       <!--GET Authors / Read authors-->
-       <button x-on:click="getAuthors" class="blue">Get Authors</button>
-               <div style="overflow-y: scroll; max-height: 250px;">
-    <template x-for="(author, index) in authors" :key="index">
-        <div>
-            <p>Email: <strong x-text="author.email">Placeholder</strong></p>
-            <p>Name: <strong x-text="author.first_name">Placeholder</strong></p>
-            <p>Surname: <strong x-text="author.last_name">Placeholder</strong></p>
-            <p>Biography: <strong x-text="author.biography">Placeholder</strong></p>
-            <p>ID: <strong x-text="author.id">Placeholder</strong></p>
-
-            <ul>
-                <template x-for="(book, bookIndex) in author.books" :key="bookIndex">
-                    <li>Title: <strong x-text="book.title">Placeholder</strong></li>
-                    <li>Description: <strong x-text="book.description">Placeholder</strong></li>
-                    <li>Publication Date: <strong x-text="book.publication_date">Placeholder</strong></li>
-                    <li>Genre: <strong x-text="book.genre">Placeholder</strong></li>
-                </template>
-            </ul>
-        </div>
-    </template>
-        </div>
 
  <!--POST author book / Create Book For Author-->
         <div x-data="{
