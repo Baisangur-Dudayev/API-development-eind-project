@@ -64,7 +64,7 @@
         },
 
         async addPenName() {
-            this.responsedata = await (await fetch(`https://useritem-api-service-eindproject-baisangur-dudayev.cloud.okteto.net/authors/${this.authorId}/pen_names/`,
+            this.responsedata = await (await fetch(`https://useritem-api-service-eindproject-baisangur-dudayev.cloud.okteto.net/authors/${this.authorId}/books/`,
             {
                 method: 'POST',
                 body: JSON.stringify(this.penNameData),
