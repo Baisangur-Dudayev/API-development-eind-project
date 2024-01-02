@@ -102,7 +102,7 @@
  <!--POST author book / Create Book For Author-->
         <div x-data="{
         PostBookResponse: null,
-        postBookData: {
+        postBookInput: {
             title: '',
             description: '',
             publication_date: '',
@@ -114,10 +114,10 @@
             this.PostBookResponse = await (await fetch(`https://useritem-api-service-eindproject-baisangur-dudayev.cloud.okteto.net/authors/${this.PostBookAuthorId}/books/`, {
                 method: 'POST',
                 body: JSON.stringify({
-                    title: this.postBookData.title,
-                    description: this.postBookData.description,
-                    publication_date: this.postBookData.publication_date,
-                    genre: this.postBookData.genre,
+                    title: this.postBookInput.title,
+                    description: this.postBookInput.description,
+                    publication_date: this.postBookInput.publication_date,
+                    genre: this.postBookInput.genre,
             }),
              headers: {
                     'Content-type': 'application/json; charset=UTF-8',
@@ -131,16 +131,16 @@
         <input type="text" x-model="PostBookAuthorId" id="PostBookAuthorId" placeholder="Enter Author ID">
 
         <label for="title">Title:</label>
-        <input type="text" x-model="postBookData.title" id="title" placeholder="Enter Book Title">
+        <input type="text" x-model="postBookInput.title" id="title" placeholder="Enter Book Title">
 
         <label for="description">Description:</label>
-        <input type="text" x-model="postBookData.description" id="description" placeholder="Enter Book Description">
+        <input type="text" x-model="postBookInput.description" id="description" placeholder="Enter Book Description">
 
         <label for="publication_date">Publication Date:</label>
-        <input type="text" x-model="postBookData.publication_date" id="publication_date" placeholder="Enter Publication Date">
+        <input type="text" x-model="postBookInput.publication_date" id="publication_date" placeholder="Enter Publication Date">
 
         <label for="genre">Genre:</label>
-        <input type="text" x-model="postBookData.genre" id="genre" placeholder="Enter Genre">
+        <input type="text" x-model="postBookInput.genre" id="genre" placeholder="Enter Genre">
 
         <button x-on:click="addBook">Add Book</button>
 
