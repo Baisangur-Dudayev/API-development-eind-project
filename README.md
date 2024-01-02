@@ -1,5 +1,5 @@
 # API Project
-This is my project for API development. The theme is about books. There are authors, books, pen names. In total there are 11 endpoints: 4 get's, 4 Post's, 2 Delete's and 1 Put. I have done all the minimum requirements (number 1.) and I have done a few front-end requiremnts (numbers 3.1, 3.1.1, 3.1.2). The frontend has been styled with css and contains the GET & POST endpoints. It is also hosted on netlify. 
+This is my project for API development. The theme is about books. There are authors, books, pen names. In total there are 11 endpoints: 4 get's, 4 Post's, 2 Delete's and 1 Put. I have done all the minimum requirements (number 1.) and I have done a few front-end requiremnts (numbers 3.1, 3.1.1, 3.1.2). 
 
 ## Frontend
 
@@ -76,4 +76,9 @@ after logging in
 ![image](https://github.com/Baisangur-Dudayev/API-development-eind-project/assets/113896223/2afb6ab5-b189-47c4-9b08-118aa00c827e)
 
 ## FRONTEND
+The frontend has been styled with css and contains all my GET & POST endpoints. It is also hosted on netlify. The blue information is the response data the I show to the user. U can scroll trough the data of each div. This way if there is a lot of information it won't get in the way and it keeps everything organized. 
+![image](https://github.com/Baisangur-Dudayev/API-development-eind-project/assets/113896223/70d51c56-f2ed-456d-8967-f74abad819fb)
+![image](https://github.com/Baisangur-Dudayev/API-development-eind-project/assets/113896223/283b4961-b7b1-47a2-b7ea-384a1099f5f7)
+![image](https://github.com/Baisangur-Dudayev/API-development-eind-project/assets/113896223/3509f3bd-4cce-4bdc-b9bf-fdd6f474f784)
+
 
