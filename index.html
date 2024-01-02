@@ -100,9 +100,33 @@
                 },
             })).json();
 
-            console.log(this.responsedataPostBook);
         },
-    }"></div>
+    }">
+        <label for="email">Title:</label>
+        <input type="text" x-model="postAuthorData.email" id="email" placeholder="Enter email">
+
+        <label for="first_name">first_name:</label>
+        <input type="text" x-model="postAuthorData.first_name" id="first_name" placeholder="Enter Book first name">
+
+        <label for="last_name">last_name:</label>
+        <input type="text" x-model="postAuthorData.last_name" id="last_name" placeholder="Enter last name">
+
+        <label for="place_of_birth">Genre:</label>
+        <input type="text" x-model="postAuthorData.place_of_birth" id="place_of_birth" placeholder="Enter place of birth">
+
+            <label for="biography">Genre:</label>
+        <input type="text" x-model="postAuthorData.biography" id="biography" placeholder="Enter biography">
+
+        <button x-on:click="addBook">Add Book</button>
+
+        <p>Data inserted with id: <strong x-text="postAuthorData.id"></strong></p>
+        <p>email that was inserted: <strong x-text="postAuthorData.email"></strong></p>
+            <p>last_name that was inserted: <strong x-text="postAuthorData.last_name"></strong></p>
+            <p>place of birth  that was inserted: <strong x-text="postAuthorData.place_of_birth"></strong></p>
+            <p>biography: that was inserted: <strong x-text="postAuthorData.biography"></strong></p>
+
+
+        </div>
 
        <!--GET Authors / Read authors-->
        <button x-on:click="getAuthors">Send get request</button>
