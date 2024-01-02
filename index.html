@@ -111,13 +111,13 @@
         <label for="last_name">last_name:</label>
         <input type="text" x-model="postAuthorData.last_name" id="last_name" placeholder="Enter last name">
 
-        <label for="place_of_birth">Genre:</label>
+        <label for="place_of_birth">place_of_birth:</label>
         <input type="text" x-model="postAuthorData.place_of_birth" id="place_of_birth" placeholder="Enter place of birth">
 
-            <label for="biography">Genre:</label>
+            <label for="biography">biography:</label>
         <input type="text" x-model="postAuthorData.biography" id="biography" placeholder="Enter biography">
 
-        <button x-on:click="addBook">Add Book</button>
+        <button x-on:click="PostAuthor">Add Author</button>
 
         <p>Data inserted with id: <strong x-text="postAuthorData.id"></strong></p>
         <p>email that was inserted: <strong x-text="postAuthorData.email"></strong></p>
