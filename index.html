@@ -91,6 +91,7 @@
                 </template>
             </ul>
              <ul>
+                 <li><b>List of pen names:</b></li>
                 <template x-for="(penName, penNameIndex) in author.pen_names" :key="penNameIndex">
                     <li>Pen Name: <strong x-text="penName.pen_name">Placeholder</strong></li>
                 </template>
@@ -196,6 +197,7 @@
             </template>
         </ul>
          <ul>
+             <li><b>List of pen names:</b></li>
                 <template x-for="(penName, penNameIndex) in singleAuthor.pen_names" :key="penNameIndex">
                     <li>Pen Name: <strong x-text="penName.pen_name">Placeholder</strong></li>
                 </template>
