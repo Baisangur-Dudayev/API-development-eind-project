@@ -29,7 +29,7 @@
 
         },
          async fetchUserData() {
-         user:null,
+
         const userResponse = await fetch('https://useritem-api-service-eindproject-baisangur-dudayev.cloud.okteto.net/users/me/', {
             headers: {
                 Authorization: `Bearer ${this.accessToken}`,
@@ -69,7 +69,7 @@
 
 
 
-        <!--LOGIN -->
+        <!--LOGIN-->
         <div x-show="!accessToken">
             <form id="loginForm" x-on:submit.prevent="login">
                 <label for="username">Username:</label>
