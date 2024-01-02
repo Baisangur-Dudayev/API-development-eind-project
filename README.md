@@ -15,6 +15,7 @@ I utilized Okteto for development. The API documentation is available at [Okteto
 
 
 ## Authentication
+u must authenticate firstto use most endpoints There is already a user with email: "test@hotmail.com" & password: "password"
 
 I implemented Oath and hashing. U must authenticate before u can interact with the delete endpoints. In the endpoint section of the readme u can also see that i can only interact with a delete endpoint if im logged in. 
 ![image](https://github.com/Baisangur-Dudayev/API-development-eind-project/assets/113896223/896e5dcd-a09f-47cf-8c7f-e95c075bbb57)
@@ -75,10 +76,14 @@ before logging in
 after logging in
 ![image](https://github.com/Baisangur-Dudayev/API-development-eind-project/assets/113896223/2afb6ab5-b189-47c4-9b08-118aa00c827e)
 
+## endpointswith postman
+
 ## FRONTEND
 The frontend has been styled with css and contains all my GET & POST endpoints. It is also hosted on netlify. The blue information is the response data the I show to the user. U can scroll trough the data of each div. This way if there is a lot of information it won't get in the way and it keeps everything organized. 
 ![image](https://github.com/Baisangur-Dudayev/API-development-eind-project/assets/113896223/70d51c56-f2ed-456d-8967-f74abad819fb)
 ![image](https://github.com/Baisangur-Dudayev/API-development-eind-project/assets/113896223/283b4961-b7b1-47a2-b7ea-384a1099f5f7)
 ![image](https://github.com/Baisangur-Dudayev/API-development-eind-project/assets/113896223/3509f3bd-4cce-4bdc-b9bf-fdd6f474f784)
 
+## pytest
+![image](https://github.com/Baisangur-Dudayev/API-development-eind-project/assets/113896223/007e82f1-fd88-431b-872f-2f2863b79d1f)
 
