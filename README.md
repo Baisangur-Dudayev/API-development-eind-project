@@ -1,5 +1,5 @@
 # API Project
-This is my project for API development. The theme is about books. There are authors, books, pen names. In total there are 10 endpoints: 4 get's, 4 Post's & 2 Delete's. I have done all the minimum requirements (number 1.) and I have done a few front-end requiremnts (numbers 3.1, 3.1.1, 3.1.2).
+This is my project for API development. The theme is about books. There are authors, books, pen names. In total there are 11 endpoints: 4 get's, 4 Post's, 2 Delete's and 1 Put. I have done all the minimum requirements (number 1.) and I have done a few front-end requiremnts (numbers 3.1, 3.1.1, 3.1.2). The frontend has been styled with css and contains the GET & POST endpoints. It is also hosted on netlify. 
 
 ## Frontend
 
