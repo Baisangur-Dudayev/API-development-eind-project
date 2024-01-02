@@ -37,12 +37,7 @@
                 this.responsedata = await response.json();
             }
         }
-        async getBooks() {
-            const response = await fetch('https://useritem-api-service-eindproject-baisangur-dudayev.cloud.okteto.net/books/');
-            if (response.ok) {
-                this.books = await response.json();
-            }
-        }
+
 
     }">
        <!--GET DATA-->
@@ -88,12 +83,7 @@
                 </template>
 
        <!--toon alle books-->
-       <button x-on:click="getBooks">get books</button>
-                <template x-for="(book, indexa) in books" :key="indexa">
-                    <div>
-                        <p>title: <strong x-text="book.title">Placeholder</strong></p>
-                    </div>
-                </template>
+
    </div>
 </body>
 
