@@ -38,7 +38,8 @@ GET /authors/
 
 POST /authors/ 
 
-![image](![image](https://github.com/Baisangur-Dudayev/API-development-eind-project/assets/113896223/bd89d9fd-b626-4673-b151-e5308ef07b49)
+![image](https://github.com/Baisangur-Dudayev/API-development-eind-project/assets/113896223/6cf74835-4f7d-49f7-a31f-f37ffbc98299)
+
 )
 
 
