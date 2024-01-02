@@ -51,10 +51,13 @@
 
 
     }">
+
+
+
        <!--POST author  book-->
         <div x-data="{
         responsedataPostBook: null,
-        postData: {
+        postBookData: {
             title: '',
             description: '',
             publication_date: '',
@@ -66,10 +69,10 @@
             this.responsedataPostBook = await (await fetch(`https://useritem-api-service-eindproject-baisangur-dudayev.cloud.okteto.net/authors/${this.authorId}/books/`, {
                 method: 'POST',
                 body: JSON.stringify({
-                    title: this.postData.title,
-                    description: this.postData.description,
-                    publication_date: this.postData.publication_date,
-                    genre: this.postData.genre,
+                    title: this.postBookData.title,
+                    description: this.postBookData.description,
+                    publication_date: this.postBookData.publication_date,
+                    genre: this.postBookData.genre,
             }),
              headers: {
                     'Content-type': 'application/json; charset=UTF-8',
@@ -79,6 +82,7 @@
             console.log(this.responsedataPostBook);
         },
     }">
+
 
         <!--LOGIN info-->
         <div x-show="!accessToken">
@@ -126,16 +130,16 @@
         <input type="text" x-model="authorId" id="authorId" placeholder="Enter Author ID">
 
         <label for="title">Title:</label>
-        <input type="text" x-model="postData.title" id="title" placeholder="Enter Book Title">
+        <input type="text" x-model="postBookData.title" id="title" placeholder="Enter Book Title">
 
         <label for="description">Description:</label>
-        <input type="text" x-model="postData.description" id="description" placeholder="Enter Book Description">
+        <input type="text" x-model="postBookData.description" id="description" placeholder="Enter Book Description">
 
         <label for="publication_date">Publication Date:</label>
-        <input type="text" x-model="postData.publication_date" id="publication_date" placeholder="Enter Publication Date">
+        <input type="text" x-model="postBookData.publication_date" id="publication_date" placeholder="Enter Publication Date">
 
         <label for="genre">Genre:</label>
-        <input type="text" x-model="postData.genre" id="genre" placeholder="Enter Genre">
+        <input type="text" x-model="postBookData.genre" id="genre" placeholder="Enter Genre">
 
         <button x-on:click="addBook">Add Book</button>
 
@@ -143,7 +147,7 @@
         <p>Title that was inserted: <strong x-text="responsedataPostBook.title"></strong></p>
             <p>description that was inserted: <strong x-text="responsedataPostBook.description"></strong></p>
             <p>publication date that was inserted: <strong x-text="responsedataPostBook.publication_date"></strong></p>
-            <p>Genre: that was inserted: <strong x-text="responsedataPostBook.publication_date"></strong></p>
+            <p>Genre: that was inserted: <strong x-text="responsedataPostBook.genre"></strong></p>
 
 
        <!--toon alle books-->
