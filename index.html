@@ -64,6 +64,8 @@
         </div>
 
         <div x-show="accessToken">
+            <p>logged in as: </p>
+        </div>
             <button x-on:click="getData">Send get request</button>
             <button x-on:click="logout">Logout</button>
 
@@ -90,7 +92,7 @@
                     </div>
                 </template>
             </template>
-        </div>
+
     </div>
 </body>
 
