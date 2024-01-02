@@ -7,7 +7,6 @@
 <body>
 
    <div x-data="{
-        responsedata: null,
         accessToken: localStorage.getItem('access_token'),
 
         async login() {
@@ -31,10 +30,16 @@
             location.reload();
         },
 
-        async getData() {
+        async getAuthors() {
             const response = await fetch('https://useritem-api-service-eindproject-baisangur-dudayev.cloud.okteto.net/authors/');
             if (response.ok) {
                 this.responsedata = await response.json();
+            }
+        }
+        async getBooks() {
+            const response = await fetch('https://useritem-api-service-eindproject-baisangur-dudayev.cloud.okteto.net/books/');
+            if (response.ok) {
+                this.books = await response.json();
             }
         }
 
@@ -55,10 +60,11 @@
         <div x-show="accessToken">
             <p>logged in as: </p>
         </div>
-            <button x-on:click="getData">Send get request</button>
-            <button x-on:click="logout">Logout</button>
-       <!--SHOW DATA-->
-            <template x-if="responsedata !== null">
+       <button x-on:click="logout">Logout</button>
+
+       <!--TOON GET ENDPOINT DATA-->
+       <!--toon alle authors-->
+       <button x-on:click="getAuthors">Send get request</button>
                 <template x-for="(author, index) in responsedata" :key="index">
                     <div>
                         <p>Email: <strong x-text="author.email">Placeholder</strong></p>
@@ -66,7 +72,6 @@
                         <p>Surname: <strong x-text="author.last_name">Placeholder</strong></p>
                         <p>Biography: <strong x-text="author.biography">Placeholder</strong></p>
                         <p>ID: <strong x-text="author.id">Placeholder</strong></p>
-                        <p>alles <strong x-text="JSON.stringify(responsedata)">Placeholder</strong></p>
 
                         <ul>
                             <template x-for="(book, bookIndex) in author.books" :key="bookIndex">
@@ -80,7 +85,16 @@
                         </ul>
                     </div>
                 </template>
-            </template>
+
+       <!--toon alle books-->
+       <button x-on:click="getBooks">Send get request</button>
+                <template x-for="(book, index) in books" :key="index">
+                    <div>
+                        <p>title: <strong x-text="book.title">Placeholder</strong></p>
+                    </div>
+
+
+
 
     </div>
 </body>
