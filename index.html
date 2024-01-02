@@ -96,10 +96,15 @@
 
        <!--toon alle books-->
    <button x-on:click="getBooks">get books</button>
-                <div style="overflow-y: scroll; max-height: 150px;">
+                <div style="overflow-y: scroll; max-height: 250px;">
                 <template x-for="(book, index) in books" :key="index">
                     <div>
                         <p>title: <strong x-text="book.title">Placeholder</strong></p>
+                        <p>title: <strong x-text="book.description">Placeholder</strong></p>
+                        <p>publication_date: <strong x-text="book.publication_date">Placeholder</strong></p>
+                        <p>genre: <strong x-text="book.genre">Placeholder</strong></p>
+                        <p>id: <strong x-text="book.id">Placeholder</strong></p>
+                        <p>author_id: <strong x-text="book.author_id">Placeholder</strong></p>
                     </div>
                 </template>
                 </div>
