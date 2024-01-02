@@ -7,6 +7,7 @@
 </head>
 <body>
 
+<!--login, get authors, get books-->
    <div x-data="{
         responsedata: null,
         books: null,
@@ -50,9 +51,34 @@
 
 
     }">
-        <div x-data="{}">
-       <!--GET DATA-->
-        <!--LOGIN-->
+       <!--POST authors-->
+          <div x-data="{
+        responsedata: null,
+        authorId: null,
+        newAuthor: {
+            email: '',
+            first_name: '',
+            last_name: '',
+            place_of_birth: '',
+            biography: '',
+            password: ''
+        },
+
+        async addAuthor() {
+            this.responsedata = await (await fetch(`https://useritem-api-service-eindproject-baisangur-dudayev.cloud.okteto.net/authors/${this.authorId}/pen_names/`,
+            {
+                method: 'POST',
+                body: JSON.stringify(this.newAuthor),
+                headers: {
+                    'Content-type': 'application/json; charset=UTF-8',
+                },
+            })).json();
+
+            console.log(this.responsedata);
+        },
+    }">
+
+        <!--LOGIN info-->
         <div x-show="!accessToken">
             <form id="loginForm" x-on:submit.prevent="login">
                 <label for="username">Username:</label>
@@ -69,7 +95,7 @@
             <button x-on:click="logout">Logout</button>
         </div>
 
-       <!--TOON GET ENDPOINT DATA-->
+       <!--TOON ENDPOINTs-->
        <!--toon alle authors-->
        <button x-on:click="getAuthors">Send get request</button>
                <div style="overflow-y: scroll; max-height: 250px;">
@@ -93,7 +119,32 @@
     </template>
 </div>
 
+    <!--toon een author-->
+ <label>Author ID:</label>
+        <input type="text" x-model="authorId">
 
+        <label>Email:</label>
+        <input type="text" x-model="newAuthor.email">
+
+        <label>First Name:</label>
+        <input type="text" x-model="newAuthor.first_name">
+
+        <label>Last Name:</label>
+        <input type="text" x-model="newAuthor.last_name">
+
+        <label>Place of Birth:</label>
+        <input type="text" x-model="newAuthor.place_of_birth">
+
+        <label>Biography:</label>
+        <input type="text" x-model="newAuthor.biography">
+
+        <label>Password:</label>
+        <input type="password" x-model="newAuthor.password">
+
+        <button x-on:click="addAuthor">Add Author</button>
+
+        <p>Author added with ID: <strong x-text="responsedata.id"></strong></p>
+        <!-- Add other response data properties as needed -->
 
        <!--toon alle books-->
    <button x-on:click="getBooks">get books</button>
@@ -110,16 +161,7 @@
                 </template>
                 </div>
 
-           <!--toon een author-->
-       <input type="text">
-   <button x-on:click="getAuthor">get books</button>
-                <div style="overflow-y: scroll; max-height: 250px;">
-                <template x-for="(authordata, index) in author" :key="index">
-                    <div>
-                        <p>email: <strong x-text="authordata.title">Placeholder</strong></p>
-                       </div>
-                </template>
-                </div>
+    </div>
    </div>
 
 </body>
