@@ -55,20 +55,19 @@
           <div x-data="{
         responsedata: null,
         authorId: null,
-        newAuthor: {
-            email: '',
-            first_name: '',
-            last_name: '',
-            place_of_birth: '',
-            biography: '',
-            password: ''
+        penNameData: {
+            title: 'string',
+            description: 'string',
+            publication_date: 'string',
+            genre: 'string',
+            // Add other properties as needed
         },
 
-        async addAuthor() {
+        async addPenName() {
             this.responsedata = await (await fetch(`https://useritem-api-service-eindproject-baisangur-dudayev.cloud.okteto.net/authors/${this.authorId}/pen_names/`,
             {
                 method: 'POST',
-                body: JSON.stringify(this.newAuthor),
+                body: JSON.stringify(this.penNameData),
                 headers: {
                     'Content-type': 'application/json; charset=UTF-8',
                 },
@@ -120,30 +119,19 @@
 </div>
 
     <!--toon een author-->
- <label>Author ID:</label>
-        <input type="text" x-model="authorId">
+  <label for="authorId">Author ID:</label>
+        <input type="text" id="authorId" x-model="authorId" placeholder="Enter Author ID">
 
-        <label>Email:</label>
-        <input type="text" x-model="newAuthor.email">
+        <!-- Input fields for each property -->
+        <input type="text" x-model="penNameData.title" placeholder="Title">
+        <input type="text" x-model="penNameData.description" placeholder="Description">
+        <input type="text" x-model="penNameData.publication_date" placeholder="Publication Date">
+        <input type="text" x-model="penNameData.genre" placeholder="Genre">
 
-        <label>First Name:</label>
-        <input type="text" x-model="newAuthor.first_name">
+        <button x-on:click="addPenName">Add Pen Name</button>
 
-        <label>Last Name:</label>
-        <input type="text" x-model="newAuthor.last_name">
-
-        <label>Place of Birth:</label>
-        <input type="text" x-model="newAuthor.place_of_birth">
-
-        <label>Biography:</label>
-        <input type="text" x-model="newAuthor.biography">
-
-        <label>Password:</label>
-        <input type="password" x-model="newAuthor.password">
-
-        <button x-on:click="addAuthor">Add Author</button>
-
-        <p>Author added with ID: <strong x-text="responsedata.id"></strong></p>
+        <p>Pen Name added with ID: <strong x-text="responsedata.id"></strong></p>
+        <p>Pen Name: <strong x-text="responsedata.pen_name"></strong></p>
         <!-- Add other response data properties as needed -->
 
        <!--toon alle books-->
