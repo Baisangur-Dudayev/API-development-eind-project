@@ -62,15 +62,18 @@
         },
         authorId: '',
         async addBook() {
-            const formData = new FormData();
-            formData.append('title', this.postData.title);
-            formData.append('description', this.postData.description);
-            formData.append('publication_date', this.postData.publication_date);
-            formData.append('genre', this.postData.genre);
 
             this.responsedata = await (await fetch(`https://useritem-api-service-eindproject-baisangur-dudayev.cloud.okteto.net/authors/1/books/`, {
                 method: 'POST',
-                body: formData,
+                body: JSON.stringify({
+                    title: this.postData.title,
+                    description: this.postData.description,
+                    publication_date: this.postData.publication_date,
+                    genre: this.postData.genre,
+            }),
+             headers: {
+                    'Content-type': 'application/json; charset=UTF-8',
+                },
             })).json();
 
             console.log(this.responsedata);
