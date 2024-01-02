@@ -15,7 +15,7 @@ I utilized Okteto for development. The API documentation is available at [Okteto
 
 
 ## Authentication
-u must authenticate firstto use most endpoints There is already a user with email: "test@hotmail.com" & password: "password"
+u must authenticate first to use most endpoints There is already a user with email: "test@hotmail.com" & password: "password"
 
 I implemented Oath and hashing. U must authenticate before u can interact with the delete endpoints. In the endpoint section of the readme u can also see that i can only interact with a delete endpoint if im logged in. 
 ![image](https://github.com/Baisangur-Dudayev/API-development-eind-project/assets/113896223/896e5dcd-a09f-47cf-8c7f-e95c075bbb57)
@@ -104,10 +104,10 @@ GET /books/
 ![image](https://github.com/Baisangur-Dudayev/API-development-eind-project/assets/113896223/a726b4dd-0ddc-4eae-8dc0-88f0315248b5)
 
 
-Ik kan verbinding maken met de PUT endpoint en de delete endpoints maar ik wist niet weke setting ik in postman moest veranderen voor de PUT
-endpoint om de data te sturen. Ik wist ook niet welke setting ik in postman moest veranderen om mijzelf the authenticeren voor DDELETE 
-endpoints in postman. Dit is niet omdat de endpoints niet werken maar omdat ik voormalig heb leren werken via /docs in mijn browser en 
-daarom kan ik niet vlot om met postman.
+I can connect to the PUT endpoint and the DELETE endpoints, but I didn't know which setting to change in Postman for the PUT
+endpoint to send the data. I also didn't know which setting to change in Postman to authenticate myself for DELETE
+endpoints. This is not because the endpoints don't work, but because I used to work with /docs in my browser
+and that's why I'm not familiar with Postman
 PUT /authors/{author_id}
 ![image](https://github.com/Baisangur-Dudayev/API-development-eind-project/assets/113896223/3d867c47-0eee-43b1-8105-692da03a06c4)
 DELETE /pen_names/{pen_name_id}
