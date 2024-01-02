@@ -76,7 +76,45 @@ before logging in
 after logging in
 ![image](https://github.com/Baisangur-Dudayev/API-development-eind-project/assets/113896223/2afb6ab5-b189-47c4-9b08-118aa00c827e)
 
-## endpointswith postman
+## Endpoints with postman
+
+GET /authors/
+![image](https://github.com/Baisangur-Dudayev/API-development-eind-project/assets/113896223/6dfa8904-b99a-4626-bf78-64096a4a1a14)
+
+
+
+POST /authors/ 
+![image](https://github.com/Baisangur-Dudayev/API-development-eind-project/assets/113896223/4f405515-0c2e-4487-b342-bac365037ae8)
+
+
+
+GET /authors/{author_id}
+![image](https://github.com/Baisangur-Dudayev/API-development-eind-project/assets/113896223/11d12d76-f520-48e1-9c55-e52a15c6af37)
+
+
+
+PUT /authors/{author_id}
+
+POST /authors/{author_id}/books/
+![image](https://github.com/Baisangur-Dudayev/API-development-eind-project/assets/113896223/75e2c370-75d2-418f-9f59-067f3d498b90)
+
+
+POST /authors/{author_id}/pen_names/
+![image](https://github.com/Baisangur-Dudayev/API-development-eind-project/assets/113896223/5537c408-6aa6-45c3-b4dd-7449076326ad)
+
+
+
+GET /books/
+![image](https://github.com/Baisangur-Dudayev/API-development-eind-project/assets/113896223/a726b4dd-0ddc-4eae-8dc0-88f0315248b5)
+
+
+
+
+DELETE /pen_names/{pen_name_id}
+
+
+DELETE /books/{book_id}
+
 
 ## FRONTEND
 The frontend has been styled with css and contains all my GET & POST endpoints. It is also hosted on netlify. The blue information is the response data the I show to the user. U can scroll trough the data of each div. This way if there is a lot of information it won't get in the way and it keeps everything organized. 
@@ -84,6 +122,6 @@ The frontend has been styled with css and contains all my GET & POST endpoints. 
 ![image](https://github.com/Baisangur-Dudayev/API-development-eind-project/assets/113896223/283b4961-b7b1-47a2-b7ea-384a1099f5f7)
 ![image](https://github.com/Baisangur-Dudayev/API-development-eind-project/assets/113896223/3509f3bd-4cce-4bdc-b9bf-fdd6f474f784)
 
-## pytest
+## PYTEST
 ![image](https://github.com/Baisangur-Dudayev/API-development-eind-project/assets/113896223/007e82f1-fd88-431b-872f-2f2863b79d1f)
 
