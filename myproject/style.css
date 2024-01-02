@@ -18,11 +18,11 @@ button {
     cursor: pointer;
 }
 
-#blue button {
+button.blue {
     background-color: #61AFFE;
 
 }
-#blue {
+button.blue:hover {
     background-color: #458fd9;
 
 }
