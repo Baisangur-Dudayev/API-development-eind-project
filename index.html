@@ -29,6 +29,7 @@
 
         },
          async fetchUserData() {
+         user:null,
         const userResponse = await fetch('https://useritem-api-service-eindproject-baisangur-dudayev.cloud.okteto.net/users/me/', {
             headers: {
                 Authorization: `Bearer ${this.accessToken}`,
