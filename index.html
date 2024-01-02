@@ -85,7 +85,7 @@
         },
         async PostAuthor() {
 
-            this.responsedataPostBook = await (await fetch(`https://useritem-api-service-eindproject-baisangur-dudayev.cloud.okteto.net/authors/`, {
+            this.responsedataPostAuthor = await (await fetch(`https://useritem-api-service-eindproject-baisangur-dudayev.cloud.okteto.net/authors/`, {
                 method: 'POST',
                 body: JSON.stringify({
                     email: this.postAuthorData.email,
@@ -119,11 +119,11 @@
 
         <button x-on:click="PostAuthor">Add Author</button>
 
-        <p>Data inserted with id: <strong x-text="postAuthorData.id"></strong></p>
-        <p>email that was inserted: <strong x-text="postAuthorData.email"></strong></p>
-            <p>last_name that was inserted: <strong x-text="postAuthorData.last_name"></strong></p>
-            <p>place of birth  that was inserted: <strong x-text="postAuthorData.place_of_birth"></strong></p>
-            <p>biography: that was inserted: <strong x-text="postAuthorData.biography"></strong></p>
+        <p>Data inserted with id: <strong x-text="responsedataPostAuthor.id"></strong></p>
+        <p>email that was inserted: <strong x-text="responsedataPostAuthor.email"></strong></p>
+            <p>last_name that was inserted: <strong x-text="responsedataPostAuthor.last_name"></strong></p>
+            <p>place of birth  that was inserted: <strong x-text="responsedataPostAuthor.place_of_birth"></strong></p>
+            <p>biography: that was inserted: <strong x-text="responsedataPostAuthor.biography"></strong></p>
 
 
         </div>
