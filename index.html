@@ -106,23 +106,26 @@
         console.log(this.PostAuthorResponse);
     },
 }">
-    <label for="email">Email:</label>
-    <input type="text" x-model="postAuthorInput.email" id="email" placeholder="Enter Email">
+    <p><label for="email">Email:</label>
+        <input type="text" x-model="postAuthorInput.email" id="email" placeholder="Enter Email"></p>
 
-    <label for="first_name">First Name:</label>
-    <input type="text" x-model="postAuthorInput.first_name" id="first_name" placeholder="Enter First Name">
 
-    <label for="last_name">Last Name:</label>
-    <input type="text" x-model="postAuthorInput.last_name" id="last_name" placeholder="Enter Last Name">
+    <p><label for="first_name">First Name:</label>
+        <input type="text" x-model="postAuthorInput.first_name" id="first_name" placeholder="Enter First Name"></p>
 
-    <label for="place_of_birth">Place of Birth:</label>
-    <input type="text" x-model="postAuthorInput.place_of_birth" id="place_of_birth" placeholder="Enter Place of Birth">
+    <p><label for="last_name">Last Name:</label>
+        <input type="text" x-model="postAuthorInput.last_name" id="last_name" placeholder="Enter Last Name"></p>
 
-    <label for="biography">Biography:</label>
-    <input type="text" x-model="postAuthorInput.biography" id="biography" placeholder="Enter Biography">
+    <p><label for="place_of_birth">Place of Birth:</label>
+        <input type="text" x-model="postAuthorInput.place_of_birth" id="place_of_birth"
+               placeholder="Enter Place of Birth"></p>
 
-    <label for="PostAuthorPassword">Password:</label>
-    <input type="PostAuthorPassword" x-model="postAuthorInput.PostAuthorPassword" id="PostAuthorPassword" placeholder="Enter PostAuthorPassword">
+    <p><label for="biography">Biography:</label>
+        <input type="text" x-model="postAuthorInput.biography" id="biography" placeholder="Enter Biography"></p>
+
+    <p><label for="PostAuthorPassword">Password:</label>
+        <input type="PostAuthorPassword" x-model="postAuthorInput.PostAuthorPassword" id="PostAuthorPassword"
+               placeholder="Enter PostAuthorPassword"></p>
 
     <button x-on:click="addAuthor">Add Author</button>
 
@@ -151,7 +154,7 @@
     <input type="text" x-model="authorIdInput" id="authorIdInput" placeholder="Author ID">
 
     <button x-on:click="getAuthorById">Get Author by ID</button>
-
+ <div style="overflow-y: scroll; max-height: 250px;">
     <div x-if="singleAuthor">
         <p>Email: <strong x-text="singleAuthor.email"></strong></p>
         <p>Name: <strong x-text="singleAuthor.first_name"></strong></p>
@@ -168,6 +171,7 @@
             </template>
         </ul>
     </div>
+     </div>
 </div>
 
 
