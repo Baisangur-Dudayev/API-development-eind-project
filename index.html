@@ -13,19 +13,21 @@
         books: null,
         accessToken: localStorage.getItem('access_token'),
 
-       async login() {
-    const form_data = new FormData(document.getElementById('loginForm'));
-    const response = await fetch('https://useritem-api-service-eindproject-baisangur-dudayev.cloud.okteto.net/token', {
-        method: 'POST',
-        body: form_data,
-    });
+        async login() {
+            const form_data = new FormData(document.getElementById('loginForm'));
+            const response = await fetch('https://useritem-api-service-eindproject-baisangur-dudayev.cloud.okteto.net/token', {
+                method: 'POST',
+                body: form_data,
+            });
 
-    if (response.ok) {
-        const data = await response.json();
-        this.accessToken = data.access_token;
-        localStorage.setItem('access_token', data.access_token);
+            if (response.ok) {
+                const data = await response.json();
+                this.accessToken = data.access_token;
+                localStorage.setItem('access_token', data.access_token);
+            }
 
-        // Fetch user data
+        },
+         async fetchUserData() {
         const userResponse = await fetch('https://useritem-api-service-eindproject-baisangur-dudayev.cloud.okteto.net/users/me/', {
             headers: {
                 Authorization: `Bearer ${this.accessToken}`,
@@ -35,9 +37,7 @@
         if (userResponse.ok) {
             this.user = await userResponse.json();
         }
-    }
-}
-,
+    },
 
         logout() {
             this.accessToken = null;
