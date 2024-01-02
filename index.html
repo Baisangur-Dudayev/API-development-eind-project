@@ -82,7 +82,7 @@
             </form>
         </div>
       <div x-show="accessToken">
-    <p>logged in as: <span x-text="userEmail"></span></p>
+    <p>logged in as:<span x-bind:text="userEmail"></span></p>
     <button x-on:click="logout" class="blue">Logout</button>
 </div>
 
