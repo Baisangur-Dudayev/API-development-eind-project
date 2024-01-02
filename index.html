@@ -65,12 +65,12 @@
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required>
 
-                <button type="submit">Login</button>
+                <button type="submit" class="blue">Login</button>
             </form>
         </div>
         <div x-show="accessToken">
             <p>logged in as: </p>
-            <button x-on:click="logout">Logout</button>
+            <button x-on:click="logout" class="blue">Logout</button>
         </div>
 
         <!--POST author -->
@@ -255,7 +255,7 @@
  </div>
 
        <!--GET books / Read Books -->
-   <button x-on:click="getBooks">get books</button>
+   <button x-on:click="getBooks" class="blue">get books</button>
                 <div style="overflow-y: scroll; max-height: 250px;">
                 <template x-for="(book, index) in books" :key="index">
                     <div>
